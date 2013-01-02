@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	/*清除默认样式*/
+	* {
+		padding: 0;
+		margin: 0;
+	}
+	/*后代选择器*/
+	.box p {
+		color: red;
+	}
+
+	/*子代选择器   只能选中儿子节点*/
+	.box > p  {
+		font-size: 100px;
+	}
+
+
+
+	/*+ 表示后面第一个亲兄弟*/
+	p + h3 {
+		/*选中的是h3 h3必须是p后面第一个亲兄弟*/
+		color: orange;
+	}
+
+
+	/*~ 表示选中后面所有亲兄弟*/
+	p ~ h3 {
+		color: pink;
+	}
+
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div>
+			<p>我是box的孙子</p>
+		</div>
+	</div>
+
+	<div class="box">
+		<p>我是box的儿子</p>
+	</div>
+
+
+	<div>
+		<h3>我是h3</h3>
+		<h3>我是h3</h3>
+		<p>我是p</p>
+		<p>我是p</p>
+		<p>我是p</p>
+		<h3>我是h3</h3>
+		<h3>我是h3</h3>
+		<h3>我是h3</h3>
+		<h3>我是h3</h3>
+		<p>我是p</p>
+		<p>我是p</p>
+	</div>
+</body>
+</html>

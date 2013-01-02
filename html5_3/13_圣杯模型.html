@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!-- <meta name="viewport" content="width=300px" /> -->
+	<!-- 约束视口宽度 -->
+	<meta name="viewport" content="width=device-width" />
+	<style type="text/css">
+		*{
+			padding:0;
+			margin:0;
+		}
+		/*box 不设置高度 让内容自动撑高*/
+		.box {
+			width: 300px;
+			/*子盒子的浏览器的高度读取300 - 100 = 200*/
+			overflow: hidden;
+			background-color: green;
+		}
+		.box p {
+			width: 200px;
+			height: 300px;
+			margin-bottom: -100px;
+			padding-bottom: 100px;
+			background-color: lightblue;
+		}
+
+
+		/*圣杯模型*/
+		.contanier {
+			width: 100%;
+			/*读取的最高  浏览器的读取高度*/
+			overflow: hidden;
+		}
+		.contanier p {
+			/*并排显示*/
+			float: left;
+			width: 20%;
+			height: 200px;
+			background-color: #eee;
+		}
+		.contanier p:first-child {
+			/*1p 设置pdb  mgb  数值 >= 该盒子高度和最高盒子的高度差值*/
+
+			/*读取200*/
+			padding-bottom: 1000px;
+			margin-bottom: -1000px;
+		}
+		.contanier p:nth-child(2) {
+			/*读取 400*/
+			height: 400px;
+			width: 50%;
+			background-color: green;
+			padding-bottom: 1000px;
+			margin-bottom: -1000px;
+		}
+		.contanier p:nth-child(3) {
+			/*读取 600*/
+			width: 30%;
+			height: 600px;
+			background-color: orange;
+		}
+
+
+
+
+
+
+	</style>
+</head>
+<body>
+	<div class="box">
+		<p></p>
+	</div>
+
+	<!-- 开始设置 3p高度不相同 ，想让所有的p高度和最高的p相同 -->
+	<div class="contanier">
+		<p>1</p>
+		<p>2</p>
+		<p>3</p>
+	</div>
+</body>
+</html>

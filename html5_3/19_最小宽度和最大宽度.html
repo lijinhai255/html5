@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!-- <meta name="viewport" content="width=300px" /> -->
+	<!-- 约束视口宽度 -->
+	<meta name="viewport" content="width=device-width" />
+	<style type="text/css">
+		*{
+			padding:0;
+			margin:0;
+		}
+		.box {
+			/*width可以正常使用百分数*/
+			width: 90%;
+			height: 200px;
+			background-color: lightblue;
+			margin: 50px auto;
+			/*最小宽度 只能使用px*/
+			min-width: 400px;
+			max-width: 1000px;
+		}
+
+
+
+
+	</style>
+</head>
+<body>
+	<div class="box">盒子</div>
+</body>
+</html>

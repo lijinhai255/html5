@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		* {
+			padding: 0px;
+			margin: 0px;
+		}
+		div {
+			width: 100px;
+			height: 100px;
+			background-color: #eee;
+			margin-bottom: 10px;
+		}
+		img {
+			width: 200px;
+			border: 5px solid #eee;
+		}
+		/*属性选择器*/
+		/*img[src="images/1.jpg"] {
+			border-color: red;
+		}*/
+		a {
+			color: #333;
+			font-size: 20px;
+		}
+		/*开头匹配*/
+		/*a[href^="html"] {
+			color: red;
+		}*/
+
+
+
+
+
+
+		/*结尾匹配*/
+		/*a[href$="02.html"] {
+			color: red;
+		}*/
+
+
+		/*任意匹配*/
+		/*a[href*="01"] {
+			color: red;
+		}*/
+
+
+
+		/*分组匹配*/
+		/*div[data-xi~="box"] {
+			表示选中元素  必须具有Box属性值  如果还有其他属性值必须以空格隔开
+			background-color: lightblue;
+		}*/
+
+
+
+		/*短横匹配  box必须在开头 如果有其他属性值必须以-连接*/
+		div[data-xi|="box"] {
+			background-color: red;
+		}
+
+
+		/*有匹配   存在这个属性名就可以被选中*/
+		/*img[alt] {
+			border-color: red;
+		}*/
+
+
+		/*属性选择器可以不书写标签名*/
+		/*[data-xi^="box"] {
+			color: green;
+			font-size: 30px;
+		}*/
+
+
+		/*属性选择器可以连续交集*/
+		div[data-xi^="box"][data-xi|="box"] {
+			background-color: orange;
+		}
+
+	</style>
+</head>
+<body>
+	<img src="images/0.jpg"  />
+	<img src="images/1.jpg" />
+	<img src="images/2.jpg"/>
+	<img src="images/3.jpg" alt="图片加载" />
+
+
+	<p><a href="html/01.html">html/01.html</a></p>
+	<p><a href="html/02.html">html/02.html</a></p>
+	<p><a href="page01/02.html">page01/02.html</a></p>
+	<p><a href="page/01.html">page/01.html</a></p>
+
+
+
+	<div data-xi="box">box</div>
+	<div data-xi="box para">box para</div>
+	<div data-xi="para box">para box</div>
+	<div data-xi="para-box">para box</div>
+	<div data-xi="box-2">box-2</div>
+	<div data-xi="box2">box</div>
+	<div data-xi="para">para</div>
+	<div data-xi="para-2">para-2</div>
+
+</body>
+</html>

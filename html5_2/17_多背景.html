@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	/*清除默认样式*/
+	* {
+		padding: 0;
+		margin: 0;
+	}
+	ul {
+		list-style: none;
+	}
+	a {
+		text-decoration: none;
+		color: #333;
+	}
+	.box {
+		width: 300px;
+		height: 300px;
+		padding: 50px;
+		border: 1px solid #000;
+		margin: 50px auto;
+		/*多背景用逗号隔开
+			让背景图从内容区域渲染并且只渲染内容区域
+
+		*/
+		background: url(images/baby.png) content-box,url(images/xiaoming.png);
+		/*其他单一属性也是逗号隔开一一对应*/
+		background-repeat: no-repeat,no-repeat;
+		background-size: 100px 100px,cover;
+		background-position: 0px 10px,0 10px;
+	}
+
+
+
+
+
+
+	
+
+	</style>
+</head>
+<body>
+	<div class="box">多背景</div>
+
+</body>
+</html>

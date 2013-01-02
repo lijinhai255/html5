@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	/*清除默认样式*/
+	* {
+		padding: 0;
+		margin: 0;
+	}
+	ul {
+		list-style: none;
+	}
+	a {
+		text-decoration: none;
+		color: #333;
+	}
+	.box {
+		width: 700px;
+		/*省略高度*/
+		border: 10px solid #000;
+		margin-bottom: 10px;
+	}
+	.box p {
+		float: left;
+		width: 100px;
+		height: 100px;
+		background-color: #eee;
+		margin-right: 10px;
+	}
+	/*在box原有内容之后增加一个块级元素还清除浮动*/
+	.box::after {
+		content: "";
+		/*after都是行内元素*/
+		display: block;
+		clear: both;
+	}
+
+	
+
+	</style>
+</head>
+<body>
+	<div class="box">
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+		<!-- 想在这里添加块级元素并且清除浮动 -->
+	</div>
+	<div class="box">
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+	</div>
+</body>
+</html>

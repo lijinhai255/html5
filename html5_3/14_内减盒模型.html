@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!-- <meta name="viewport" content="width=300px" /> -->
+	<!-- 约束视口宽度 -->
+	<meta name="viewport" content="width=device-width" />
+	<style type="text/css">
+		*{
+			padding:0;
+			margin:0;
+		}
+		.box {
+			/*外扩*/
+			width: 200px;
+			height: 200px;
+			/*在设置padding border 盒子占有区域变大*/
+			padding: 50px;
+			border: 10px solid #000;
+			background-color: lightblue;
+		}
+		.box2 {
+			/*内减盒模型*/
+			width: 200px;
+			height: 200px;
+			background-color: orange;
+			/*内减盒模型*/
+			box-sizing: border-box;
+			/*在设置padding border 是在内容区域渲染  不会让盒子变大*/
+			padding: 50px;
+			border: 10px solid #000;
+		}
+
+
+
+		.box3 {
+			/*通栏效果*/
+			width: 100%;
+			height: 200px;
+			background-color: lightblue;
+			border: 1px solid #000;
+			/*占有宽度和页面相同  内减*/
+			box-sizing: border-box;
+		}
+		.box3 p {
+			/*两个p均分box3*/
+			float: left;
+			width: 50%;
+			height: 200px;
+			background-color: red;
+			border: 10px solid #eee;
+			/*内减盒模型*/
+			box-sizing: border-box;
+		}
+		.box3 p:last-child {
+			background-color: green;
+		}
+
+
+
+
+
+	</style>
+</head>
+<body>
+	<div class="box">盒子</div>
+	<div class="box2">内减盒子</div>
+	<!-- 应用 -->
+	<div class="box3">
+		<p>1</p>
+		<p>2</p>
+	</div>
+</body>
+</html>

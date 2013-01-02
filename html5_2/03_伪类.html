@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	/*清除默认样式*/
+	* {
+		padding: 0;
+		margin: 0;
+	}
+	p {
+		height: 50px;
+		line-height: 50px;
+	}
+	img {
+		width: 200px;
+		border: 5px solid #eee;
+	}
+	img:hover {
+		/*小手状*/
+		cursor: pointer;
+		border-color: red;
+	}
+
+	/*选中单选框   被选中才有特殊效果  让后面的span颜色变色*/
+	input[type="radio"]:checked + span {
+		color: red;
+	}
+
+	/*：focus 获取焦点伪类*/
+	input:focus {
+		/*outline外边框*/
+		outline: none;
+		border: 1px solid red;
+	}
+
+
+	/*disabled 不可用表单伪类*/
+	input:disabled {
+		outline: none;
+		border: 1px solid blue;
+	}
+
+	input:enabled {
+		outline: none;
+		border: 1px solid orange;
+	}
+
+
+	div {
+		width: 100px;
+		height: 100px;
+		background-color: #eee;
+		margin-bottom: 10px;
+	}
+	/*：empty 空节点伪类*/
+	div:empty {
+		background-color: orange;
+	}
+
+
+	/*：only-child 唯一儿子的伪类*/
+	li:only-child {
+		/*选中li必须是ul唯一的一个儿子节点*/
+		color: red;
+	}
+
+	</style>
+</head>
+<body>
+	<img src="images/1.jpg" alt="">
+	<img src="images/2.jpg" alt="">
+	<img src="images/3.jpg" alt="">
+	<img src="images/4.jpg" alt="">
+
+
+	<form action="">
+		<p>
+			请输入你的用户名：<input type="text" placeholder="用户名">
+		</p>
+		<p>
+			请输入你要查询的内容：<input type="search">
+		</p>
+		<p>
+			请输入密码： <input type="password">
+		</p>
+		<p>
+			<!-- 不可用表单属性 -->
+			请输入电话：<input type="tel" disabled>
+		</p>
+		<p>
+			请选择性别：
+			<label>
+				<input type="radio" name="sex"><span>女</span>
+			</label>
+			<label>
+				<input type="radio" name="sex"><span>男</span>
+			</label>
+		</p>
+		<p>
+			请选择器爱好：
+			<input type="checkbox" name="fav">爱好1
+			<input type="checkbox" name="fav">爱好1
+			<input type="checkbox" name="fav">爱好1
+		</p>
+
+	</form>
+
+
+	<div></div>
+	<div> </div>
+	<div>					</div>
+	<div>
+		
+
+
+	</div>
+	<div>空</div>
+	<div>
+		<p></p>
+	</div>
+
+
+
+	<ul>
+		<li>A</li>
+	</ul>
+
+	<ul>
+		<li>B</li>
+		<li>C</li>
+	</ul>
+
+	<ul>
+		<li>
+			<ul>
+				<li>D</li>
+			</ul>
+		</li>
+		<li>E</li>
+	</ul>
+</body>
+</html>

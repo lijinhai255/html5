@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			padding:0;
+			margin:0;
+		}
+		.box1 {
+			width: 200px;
+			height: 200px;
+			/*只表示背景颜色变透明*/
+			background-color: rgba(255,0,0,.5);
+			border: 10px solid #000;
+			color: #fff;
+			font-size: 30px;
+			font-weight: bold;
+		}
+		.box2 {
+			width: 200px;
+			height: 200px;
+			background-color: red;
+			border: 10px solid #000;
+			color: #fff;
+			font-size: 30px;
+			font-weight: bold;
+			/*opacity设置整体透明度*/
+			opacity: 0.5;
+		}
+		.box3 {
+			width: 200px;
+			height: 200px;
+			background-color: lightblue;
+			/*0表示完全透明 用户看不到但是元素存在页面中*/
+			opacity: 0;
+		}
+		.box5 {
+			width: 200px;
+			height: 200px;
+			background-color: lightblue;
+			/*display: none 消失，不存在页面中*/
+			display: none;
+		}
+		.box4 {
+			width: 200px;
+			height: 200px;
+			background-color: lightblue;
+		}
+
+
+
+
+
+
+	</style>
+</head>
+<body>
+	<div class="box1">盒子1</div>
+	<div class="box2">盒子2</div>
+	<div class="box3">盒子完全透明</div>
+	<div class="box5">none</div>
+	<div class="box4">盒子</div>
+</body>
+</html>

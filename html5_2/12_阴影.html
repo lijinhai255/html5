@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	/*清除默认样式*/
+	* {
+		padding: 0;
+		margin: 0;
+	}
+	ul {
+		list-style: none;
+	}
+	a {
+		text-decoration: none;
+		color: #333;
+	}
+	.box1 {
+		width: 200px;
+		height: 200px;
+		border: 1px solid #000;
+		margin: 50px auto;
+		/*默认阴影都是在外面*/
+		box-shadow: 5px 10px 5px 5px rgba(0,0,0,.4);
+	}
+
+
+	.box2 {
+		width: 200px;
+		height: 200px;
+		border: 1px solid #000;
+		margin: 50px auto;
+		/*内阴影  inset*/
+		box-shadow: inset 5px 10px 5px 5px rgba(0,0,0,.4);
+	}
+	.box3 {
+		width: 200px;
+		height: 200px;
+		border: 1px solid #000;
+		margin: 50px auto;
+		/*多个阴影，使用逗号*/
+		box-shadow: 0 0 8px rgba(255,0,0,.5), 5px 5px 5px blue, 10px 10px 5px green;
+	}
+
+	p {
+		font-size: 50px;
+		text-shadow: 5px 5px 5px red;
+	}
+
+
+
+
+	
+
+	</style>
+</head>
+<body>
+	<div class="box1"></div>
+	<div class="box2">内阴影</div>
+	<div class="box3">多个阴影，使用逗号</div>
+	<p>文字阴影</p>
+</body>
+</html>

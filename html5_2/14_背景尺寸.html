@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	/*清除默认样式*/
+	* {
+		padding: 0;
+		margin: 0;
+	}
+	ul {
+		list-style: none;
+	}
+	a {
+		text-decoration: none;
+		color: #333;
+	}
+	.box1 {
+		width: 300px;
+		height: 300px;
+		padding: 50px;
+		border: 1px solid #000;
+		/*能够显示背景区域 400 * 400 */
+		background-image: url(images/baby.png);
+		background-repeat: no-repeat;
+		background-size: 400px 400px;
+	}
+	.box2 {
+		width: 300px;
+		height: 300px;
+		padding: 50px;
+		border: 1px solid #000;
+		/*能够显示背景区域 400 * 400 */
+		background-image: url(images/baby.png);
+		/*background-repeat: no-repeat;*/
+		background-size: 50% 25%;
+	}
+	.box3 {
+		width: 300px;
+		height: 400px;
+		padding: 50px;
+		border: 1px solid #000;
+		background-image: url(images/baby.png);
+		background-repeat: no-repeat;
+		background-size: 500px 500px;
+		background-size: cover;
+	}
+	.box4 {
+		width: 300px;
+		height: 400px;
+		padding: 50px;
+		border: 1px solid #333;
+		background-image: url(images/baby.png);
+		background-repeat: no-repeat;
+		background-size: 400px 400px;
+		background-size: contain;
+	}
+
+
+
+
+	
+
+	</style>
+</head>
+<body>
+	<div class="box1">像素表示法</div>
+	<div class="box2">百分数表示法</div>
+	<div class="box3">cover，覆盖</div>
+	<div class="box4">contain，容纳</div>
+
+</body>
+</html>

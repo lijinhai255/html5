@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!-- <meta name="viewport" content="width=300px" /> -->
+	<!-- 约束视口宽度 -->
+	<meta name="viewport" content="width=device-width" />
+	<style type="text/css">
+		*{
+			padding:0;
+			margin:0;
+		}
+		.box {
+			width: 500px;
+			border: 1px solid #000;
+			overflow: hidden;
+		}
+		.box p {
+			float: left;
+			width: 100px;
+			height: 100px;
+			background-color: lightblue;
+		}
+		.box p:nth-child(2) {
+			opacity: .6;
+			background-color: red;
+			/*mgl表示相对于上一个元素进行偏移  正方向向右*/
+			margin-left: 10px;
+			/*mgl 负值表示向左移动*/
+			margin-left: -50px;
+		}
+
+
+
+
+
+		/*双飞翼*/
+		/*三个大盒子浮动*/
+		.container {
+			float: left;
+			width: 100%;
+			height: 200px;
+			background-color: #eee;
+		}
+		.container .main {
+			/*标准流 宽度自适应*/
+			height: 400px;
+			background-color: green;
+			/*对于标准流没有设置宽度 mg占有位置*/
+			margin: 0 210px;
+		}
+		.left {
+			/*和container同级*/
+			float: left;
+			width: 200px;
+			height: 300px;
+			background-color: orange;
+			/*让left 在最左侧需要移动container宽度*/
+			margin-left: -100%;
+		}
+		.right {
+			float: left;
+			width: 200px;
+			height: 300px;
+			background-color: lightblue;
+			/*移动自身宽度*/
+			margin-left: -200px;
+		}
+
+
+
+
+
+
+	</style>
+</head>
+<body>
+	<div class="box">
+		<p>1</p>
+		<p>2</p>
+		<p>3</p>
+	</div>
+
+	<!-- 双飞翼模型 -->
+	<div class="container">
+		<!-- 宽度自适应 -->
+		<div class="main"></div>
+	</div>
+	<!-- left right宽度固定值 一个最左侧 一个最右侧 -->
+	<div class="left">left</div>
+	<div class="right">right</div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!-- <meta name="viewport" content="width=300px" /> -->
+	<!-- 约束视口宽度 -->
+	<meta name="viewport" content="width=device-width" />
+	<style type="text/css">
+		*{
+			padding:0;
+			margin:0;
+		}
+		.box {
+			width: 600px;
+			height: 400px;
+			padding: 50px;
+			border: 10px solid #000;
+			background-color: #eee;
+		}
+		.box p {
+			/*width : 相对于父盒子内容宽*/
+			width: 50%;
+			height: 50%;
+			padding: 10%;
+			margin: 10%;
+			background-color: lightblue;
+		}
+
+
+
+		.box2 {
+			width: 600px;
+			height: 400px;
+			padding: 50px;
+			border: 10px solid #000;
+			background-color: #eee;
+			position: relative;
+		}
+		.box2 p {
+			position: absolute;
+			width: 50%;
+			height: 50%;
+			padding: 10%;
+			margin: 10%;
+			background-color: orange;
+			left: 0px;
+			top: 0px;
+		}
+
+
+		/*.box3通栏*/
+		.box3 {
+			width: 100%;
+			height: 200px;
+		}
+		.box3 p {
+			/*四个p均分box3*/
+			float: left;
+			width: 25%;
+			height: 200px;
+			background-color: lightblue;
+		}
+		.box3 p:nth-child(2n) {
+			background-color: orange;
+		}
+
+
+
+
+
+	</style>
+</head>
+<body>
+	<div class="box">
+		<p>盒子</p>
+	</div>
+
+	<!-- 绝对定位 -->
+	<div class="box2">
+		<p></p>
+	</div>
+
+	<!-- 应用 -->
+	<div class="box3">
+		<p>1</p>
+		<p>2</p>
+		<p>3</p>
+		<p>4</p>
+	</div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!-- <meta name="viewport" content="width=300px" /> -->
+	<!-- 约束视口宽度 -->
+	<meta name="viewport" content="width=device-width" />
+	<style type="text/css">
+		*{
+			padding:0;
+			margin:0;
+		}
+		.box {
+			/*通栏*/
+			width: 100%;
+			height: 100px;
+		}
+		.box p {
+			float: left;
+		}
+		.box p.no1 {
+			/*宽度是固定值左侧*/
+			width: 200px;
+			height: 100px;
+			background-color: lightblue;
+		}
+		.box p.no2 {
+			/*宽度自适应 calc*/
+			width: calc(100% - 400px);
+			height: 100px;
+			background-color: green;
+		}
+		.box p.no3 {
+			/*宽度是固定值右侧*/
+			float: right;
+			width: 200px;
+			height: 100px;
+			background-color: lightblue;
+		}
+
+
+
+
+	</style>
+</head>
+<body>
+	<div class="box">
+		<p class="no1">1</p>
+		<p class="no2">2</p>
+		<p class="no3">3</p>
+	</div>
+</body>
+</html>

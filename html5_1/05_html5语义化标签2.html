@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		/*清除默认样式*/
+		* {
+			padding: 0px;
+			margin: 0px;
+		}
+		ul {
+			list-style: none;
+		}
+		a {
+			text-decoration: none;
+			color: #333;
+		}
+		header {
+			width: 1000px;
+			height: 100px;
+			background-color: green;
+			margin: 0 auto;
+		}
+		header .logo {
+			float: left;
+			width: 100px;
+			height: 100px;
+			background-color: orange;
+		}
+		header nav {
+			float: right;
+			width: 900px;
+			height: 100px;
+		}
+		header nav ul li {
+			float: left;
+		}
+		.content {
+			width: 1000px;
+			height: 600px;
+			background-color: #eee;
+			margin: 20px auto;
+		}
+		.content aside {
+			float: left;
+			width: 350px;
+			height: 500px;
+			background-color: orange;
+		}
+		.content .main {
+			float: right;
+			width: 600px;
+			height: 600px;
+			background-color: lightblue;
+		}
+		footer {
+			width: 1000px;
+			height: 100px;
+			/*块级元素水平居中*/
+			margin: 0 auto;
+			background-color: #eee;
+		}
+	</style>
+</head>
+<body>
+	<!-- section区域 	header头部 	footer底部   nav导航	aside侧边栏		article文章     这些标签都是块级元素-->
+
+
+
+	<!-- header部分 -->
+	<header>
+		<h1 class="logo">logo</h1>
+		<nav>
+			<ul>
+				<li><a href="">导航</a></li>
+				<li><a href="">导航</a></li>
+				<li><a href="">导航</a></li>
+				<li><a href="">导航</a></li>
+				<li><a href="">导航</a></li>
+			</ul>
+		</nav>
+	</header>
+	<!-- 内容区域 -->
+	<section class="content">
+		<aside>侧边栏</aside>
+		<section class="main">
+			<!-- figure  figcaption标题-->
+			<figure>
+				<figcaption>图片的标题</figcaption>
+				<img src="images/1.jpg" alt="" width="200">
+			</figure>
+
+			<!-- time日期   time行内元素-->
+			<p>我们下午上课的时间是<time>2点</time></p>
+
+
+			<!-- mark  标记 默认的背景颜色-->
+			<p>同学们每一天都需要<mark>多敲代码</mark></p>
+
+
+			<!-- details 细节 summary总结（标题） -->
+			<details>
+				<summary>我们每一阶段都有测试</summary>
+				<p>html基础测试</p>
+				<p>js基础测试</p>
+			</details>
+		</section>
+	</section>
+	<!-- 底部 -->
+	<footer></footer>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	/*清除默认样式*/
+	* {
+		padding: 0;
+		margin: 0;
+	}
+	.box {
+		width: 200px;
+		height: 200px;
+		background-color: lightblue;
+		/*变形*/
+
+		/*水平：正方向是向右*/
+		transform: translateX(100px);
+		/*垂直：正方向是向下*/
+		transform: translateY(100px);
+
+		/*合并书写*/
+		transform: translate(100px,100px);
+	}
+	.box2 {
+		width: 600px;
+		height: 600px;
+		border: 1px solid #000;
+		position: relative;
+	}
+	.box2 p {
+		/*绝对定位水平居中*/
+		width: 200px;
+		height: 100px;
+		background-color: orange;
+		position: absolute;
+		margin: 0 auto;
+		/*左侧在祖先居中*/
+		left: 50%;
+		/*拉回自身宽度的一半*/
+		/*垂直居中*/
+		top: 50%;
+		/*拉回自身高度的一半*/
+		transform: translate(-50%,-50%);
+
+	}
+
+
+
+	</style>
+</head>
+<body>
+	<div class="box">盒子</div>
+
+	<div class="box2">
+		<p>绝对定位</p>
+	</div>
+</body>
+</html>

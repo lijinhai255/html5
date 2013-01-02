@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	/*清除默认样式*/
+	* {
+		padding: 0;
+		margin: 0;
+	}
+	ul {
+		list-style: none;
+	}
+	a {
+		text-decoration: none;
+		color: #fff;
+	}
+	.box {
+		width: 800px;
+		/*块级元素垂直居中  不设置height 设置下上Padding*/
+		padding: 20px 0px;
+		border: 1px solid #000;
+		background-color: #eee;
+		margin: 50px auto;
+		/*子盒子设置浮动不能撑高父盒子   */
+		overflow: hidden;
+	}
+	.box ul li {
+		/*块级元素 独占一行  效果：并排显示有大小一定是浮动*/
+		float: left;
+		width: 107px;
+		height: 107px;
+		margin-right: 20px;
+		position: relative;
+	}
+	.box ul li a {
+		display: block;
+		width: 107px;
+		height: 107px;
+		text-align: center;
+		/*文字靠下 lh > height*/
+		line-height: 150px;
+		position: relative;
+		z-index: 10;
+	}
+	/*注意背景图必须只有一个背景图 不能有任何其他元素*/
+	.box ul li::after {
+		content: "";
+		/*行内元素  实现压盖效果绝对定位*/
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		width: 107px;
+		height: 107px;
+		background: url(images/a_1.png);
+		/*过渡*/
+		transition: all 1s linear 0s;
+	}
+	.box ul li.no2::after {
+		background-image: url(images/a_2.png);
+	}
+	/*小图标*/
+	.box ul li::before {
+		content: "";
+		position: absolute;
+		width: 46px;
+		height: 42px;
+		background: url(images/tb_1.png);
+		/*绝对定位水平居中*/
+		left: 50%;
+		/*空间移动*/
+		transform: translateX(-50%);
+		top: 10px;
+		/*默认压盖顺序：有定位的压盖没定位； 都有定位后面（html结构）压盖前面*/
+		z-index: 4;
+	}
+	.box ul li.no2::before {
+		width: 40px;
+		background-image: url(images/tb_2.png);
+	}
+	.box ul li:hover::after {
+		background-image: url(images/a_1_h1.png);
+		transform: rotate(360deg);
+	}
+	.box ul li.no2:hover::after {
+		background-image: url(images/a_2_h1.png);
+		transform: rotate(360deg);
+	}
+
+
+
+	</style>
+</head>
+<body>
+	<div class="box">
+		<ul>
+			<li><a href="">我要约车</a></li>
+			<li class="no2"><a href="">班型介绍</a></li>
+			<li><a href="">班车服务</a></li>
+			<li><a href="">科目教学</a></li>
+			<li><a href="">网上约车</a></li>
+		</ul>
+	</div>
+</body>
+</html>

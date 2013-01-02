@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	/*清除默认样式*/
+	* {
+		padding: 0;
+		margin: 0;
+	}
+	ul {
+		list-style: none;
+	}
+	a {
+		text-decoration: none;
+		color: #333;
+	}
+	.box {
+		/*盒子属性*/
+		width: 300px;
+		height: 300px;
+		border: 1px solid #000;
+		/*块级元素的居中*/
+		margin: 50px auto;
+
+		/*文字属性*/
+		font-size: 20px;
+		line-height: 50px;
+		/*溢出隐藏*/
+		overflow: hidden;
+		position: relative;
+	}
+	/*box原有内容之后增加一个蒙版*/
+	div::after {
+		/*必须书写content*/
+		content: "查看更多";
+		/*after都是行内元素   效果：大小和父盒子相同  需要压盖住文字   绝对定位*/
+		position: absolute;
+		left: 0px;
+		top: 300px;
+		width: 300px;
+		height: 300px;
+		background-color: rgba(0,0,0,.6);
+		text-align: center;
+		line-height: 300px;
+		color: #fff;
+		font-weight: bold;
+	}
+	/*鼠标悬停*/
+	.box:hover::after {
+		top: 0px;
+	} 
+
+	
+
+	</style>
+</head>
+<body>
+	<div class="box">
+		<p>文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字</p>
+	</div>
+</body>
+</html>

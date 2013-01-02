@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	/*清除默认样式*/
+	* {
+		padding: 0;
+		margin: 0;
+	}
+	ul {
+		list-style: none;
+	}
+	a {
+		text-decoration: none;
+		color: #333;
+	}
+	div {
+		width: 200px;
+		height: 200px;
+		background-color: lightblue;
+		/*过渡
+		第一个参数：过渡属性,一般书写all,只要属性改变都参与过渡
+		第二个：过渡时间s
+		第三个：缓冲描述linear  ease
+		最后：延迟时间，如果是0s
+
+
+		*/
+		/*transition: width 2s linear 4s;*/
+		/*transition: all 2s linear 0s;*/
+		transition: all 2s ease 0s;
+		transition: all 2s cubic-bezier(0, 0.73, 1,-0.06) 0s;
+
+	}
+	div:hover {
+		width: 800px;
+		height: 400px;
+		background-color: red;
+	}
+
+
+	/*background-position可以参与过渡*/
+	a {
+		display: block;
+		width: 81px;
+		height: 74px;
+		border: 1px solid #000;
+		background: url(images/weixin.png) no-repeat;
+		/*动画可以使用过渡*/
+		transition: all 0.5s linear 0s;
+	}
+	a:hover {
+		/*不书写过渡表示有0 0 瞬间变到  0 -74px  干嘣效果*/
+		background-position: 0px -73px;
+	}
+	
+
+
+
+
+
+	
+
+	</style>
+</head>
+<body>
+	<div>盒子</div>
+
+	<a href=""></a>
+
+</body>
+</html>

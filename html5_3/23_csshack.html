@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!-- <meta name="viewport" content="width=300px" /> -->
+	<!-- 约束视口宽度 -->
+	<meta name="viewport" content="width=device-width" />
+	<style type="text/css">
+		*{
+			padding:0;
+			margin:0;
+		}
+		.box {
+			width: 200px;
+			height: 200px;
+			background-color: lightblue;
+			color: red;
+			/*只有IE6 文字颜色显示蓝色*/
+			-color: blue;
+			/*IE6,7都认识  !*/
+			!color: yellow;
+		}
+		.box2 {
+			/*文字颜色在IE8。9 显示红色*/
+			color: red\0/;
+		}
+
+		.box3 {
+			color: red\9;
+		}
+		/*只有IE认识* 是根元素*/
+		* html .box4 {
+			font-size: 50px;
+		}
+		/*，IE7一下才认识*/
+		.box5, {
+			color: pink;
+		}
+		/* > 只有IE6不认识*/
+		body > .box6 {
+			font-size: 50px;
+			color: red;
+		}
+
+
+
+
+	</style>
+</head>
+<body>
+	<div class="box">文字</div>
+	<div class="box2">IE8,9</div>
+	<div class="box3">IE10一下 \9</div>
+
+	<div class="box4">*是IE6根元素</div>
+	<div class="box5">,是有IE7一下可以认识</div>
+	<div class="box6">> 只有IE6不可以认识</div>
+</body>
+</html>

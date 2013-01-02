@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!-- <meta name="viewport" content="width=300px" /> -->
+	<!-- 约束视口宽度 -->
+	<meta name="viewport" content="width=device-width" />
+	<style type="text/css">
+		*{
+			padding:0;
+			margin:0;
+		}
+		section {
+			height: 600px;
+			border: 1px solid #000;
+			position: relative;
+		}
+		section .big {
+			/*位置调整 定位*/
+			position: absolute;
+			width: 241px;
+			height: 152px;
+			background: url(images/page.png) no-repeat 0px 0px;
+			left: 400px;
+			bottom: 160px;
+		}
+		section .leaf {
+			position: absolute;
+			width: 89px;
+			height: 63px;
+			background: url(images/page.png) no-repeat 0px -152px;
+			left: 350px;
+			top: 200px;
+			/*调用*/
+			-webkit-animation: leaf 10s linear 0s infinite;
+		}
+		/*定义动画*/
+		@-webkit-keyframes leaf {
+			/*
+			css到0%状态是瞬间完成
+			0-30 树叶从天上飘落下来
+			30-60 树叶掉落土地
+			60-100 让树叶一直透明，模拟等待时间
+
+
+
+
+			*/
+			0% {
+				transform: translate(-100px,-200px) rotate(0deg);
+				opacity: 0;
+			}
+			30% {
+				transform: translate(100px,100px) rotate(5deg);
+				opacity: 1;
+			}
+			60% {
+				transform: translate(200px,300px) rotate(10deg);
+				opacity: 0;
+			}
+			100% {
+				transform: translate(200px,300px) rotate(10deg);
+				opacity: 0;
+			}
+		}
+
+
+
+
+
+	</style>
+</head>
+<body>
+	<h1></h1>
+	<script type="text/javascript">
+		var h1= document.getElementsByTagName("h1")[0];
+		h1.innerHTML = document.documentElement.clientWidth;
+	</script>
+</body>
+</html>

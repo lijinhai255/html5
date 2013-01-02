@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	/*清除默认样式*/
+	* {
+		padding: 0;
+		margin: 0;
+	}
+	ul {
+		list-style: none;
+	}
+	a {
+		text-decoration: none;
+		color: #333;
+	}
+	.box {
+		/*盒子属性*/
+		width: 400px;
+		height: 500px;
+		border: 1px solid #000;
+		margin: 50px auto;
+	}
+	.box ul li {
+		height: 60px;
+		line-height: 60px;
+		font-size: 20px;
+	}
+	.box ul li a {
+		/*一般都转块 范围变大*/
+		display: block;
+		height: 60px;
+		padding-left: 30px;
+		position: relative;
+	}
+	/*在a标签原有文字之前增加小圆点*/
+	.box ul li a::before {
+		/*必须书写content属性  如果没有要插入内容文字书写""*/
+		content: "";
+		/*before 都是行内元素 不能设置宽高   压盖效果一定是绝对定位   位置特殊的元素也可以考虑绝对定位
+		绝对定位的元素脱离标准文档流
+		可以设置宽高可以并排显示 
+		*/
+		position: absolute;
+		width: 14px;
+		height: 14px;
+		background-color: #eee;
+		left: 10px;
+		top: 23px;
+		border-radius: 50%;
+	}
+	.box ul li a:hover {
+		color: red;
+	}
+	.box ul li a:hover::before {
+		/*鼠标悬停只能先书写hover 在设置before*/
+		background-color: red;
+	}
+
+	</style>
+</head>
+<body>
+	<section class="box">
+		<ul>
+			<li><a href="">文字文字文字文字文字文字文字</a></li>
+			<li><a href="">文字文字文字文字文字文字文字</a></li>
+			<li><a href="">文字文字文字文字文字文字文字</a></li>
+			<li><a href="">文字文字文字文字文字文字文字</a></li>
+			<li><a href="">文字文字文字文字文字文字文字</a></li>
+			<li><a href="">文字文字文字文字文字文字文字</a></li>
+			<li><a href="">文字文字文字文字文字文字文字</a></li>
+		</ul>
+	</section>
+</body>
+</html>

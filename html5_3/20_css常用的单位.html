@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!-- <meta name="viewport" content="width=300px" /> -->
+	<!-- 约束视口宽度 -->
+	<meta name="viewport" content="width=device-width" />
+	<style type="text/css">
+		*{
+			padding:0;
+			margin:0;
+		}
+		html {
+			font-size: 20px;
+		}
+		.box {
+			font-size: 40px;
+		}
+		.box p {
+			/*表示box 字号2倍  40*2 = 80px*/
+			font-size: 2em;
+		}
+		/*对于span 继承p字号是继承的计算后的数值 80px 而不是2em*/
+
+		.box p span {
+			/*字号是 80 * 2 = 160px*/
+			font-size: 2em;
+		}
+
+
+
+		/*rem表示根元素html的倍数*/
+		.box2 {
+			font-size: 40px;
+		}
+		.box2 p {
+			/*html字号是20    20* 2 = 40px*/
+			font-size: 2rem;
+		}
+
+
+
+	</style>
+</head>
+<body>
+	<div class="box">
+		<p>我是普通文字<span>我是span</span>
+		</p>
+	</div>
+	<div class="box2">
+		<p>文字</p>
+	</div>
+</body>
+</html>
